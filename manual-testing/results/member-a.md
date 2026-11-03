@@ -6,7 +6,7 @@
 |---|---|
 | Tester identifier | member-a |
 | Date and time | 3 Nov 2026, 10:25 |
-| Browser and version | Google Chrome 156.0.8078.80 |
+| Browser and version | Microsoft Edge 156.0.4314.58 |
 | Operating system | Windows 11 Pro 25H2 |
 
 ## Login Tests
@@ -18,7 +18,7 @@
 | Test type | Positive |
 | Tester | member-a |
 | Website | SauceDemo |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -50,11 +50,11 @@ The inventory page appears and products are visible.
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+After selecting Login with `standard_user` and `secret_sauce`, the Products page (`/inventory.html`) appeared and the product list was visible.
 
 #### Evidence
 
-Not captured.
+Not captured (passing test, written result recorded).
 
 ---
 
@@ -65,7 +65,7 @@ Not captured.
 | Test type | Recovery |
 | Tester | member-a |
 | Website | SauceDemo |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -99,11 +99,14 @@ The invalid attempt is rejected. After correcting the password, login succeeds a
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+Attempt 1: After selecting Login with `wrong_password`, the login was rejected. The page stayed on the login screen, both fields were marked with red ✕ icons, and the error "Epic sadface: Username and password do not match any user in this service" was shown.
+
+Attempt 2: Without refreshing, the password was replaced with `secret_sauce` and Login was selected again. The Products page (`/inventory.html`) appeared and the product list was visible.
 
 #### Evidence
 
-Not captured.
+- [Rejected attempt](../evidence/member-a/login-r01-rejected.png)
+- [Successful login after correction](../evidence/member-a/login-r01-success.png)
 
 ---
 
