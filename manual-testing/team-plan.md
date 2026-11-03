@@ -39,7 +39,10 @@ To be recorded by Member B during Activity 2.
 
 ## Open-Ended Testing Allocation
 
-To be decided at Activity 5.
+### Member A — Open-Ended Testing
+
+- Chosen area: Test Pages validation form, First name field
+- Question to investigate: What first-name lengths does the server actually accept, given that the baseline `Alex` was rejected as too short although no minimum is published?
 
 ## Repository Integration Arrangements
 
