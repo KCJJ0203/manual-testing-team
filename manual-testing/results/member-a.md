@@ -222,3 +222,64 @@ This rejection came from client-side (browser) validation, from the Age field's 
 ---
 
 ## 3-Point Boundary Tests
+
+Convention: ISTQB CTFL v4.0 three-value boundary analysis (eight-value set 16, 17, 18, 19, 79, 80, 81, 82).
+
+### Test ID: AGE-3P-16-A
+
+| Item | Details |
+|---|---|
+| Test type | Negative |
+| Tester | member-a |
+| Website | Test Pages — Client Server Form Validation |
+| Technique | 3-point boundary testing |
+| Status | Pass |
+
+#### Purpose
+
+Check that age 16 (one below the invalid-partition boundary value 17) is rejected.
+
+#### Preconditions
+
+The validation form is open and restored. All other fields use the agreed valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| First name | `Alexander` |
+| Surname | `TestingStudent` |
+| Age | `16` |
+| Country | Singapore |
+| Notes | `Manual testing classroom exercise` |
+
+#### Steps
+
+1. Restore the validation form.
+2. Enter the agreed baseline.
+3. Replace age with `16`.
+4. Submit.
+5. Observe the response.
+
+#### Expected Result
+
+Age 16 is rejected because it is below the minimum age of 18.
+
+#### Actual Result
+
+After selecting Submit, the form was not submitted. The browser (Microsoft Edge) showed its built-in validation message on the Age field: "Value must be greater than or equal to 18." The page stayed on the input form and no Validation Report appeared.
+
+As with AGE-2P-17-A, this rejection came from client-side (browser) validation. The request never reached the server.
+
+#### Evidence
+
+[Browser validation message for age 16](../evidence/member-a/age-3p-16-a.png)
+
+---
+
+### Age 17 — Reused Execution
+
+- Original test: `AGE-2P-17-A`
+- Tester: `member-a`
+- Record: see AGE-2P-17-A above in this file
+- Reason for reuse: The baseline, environment, and procedure remain applicable.
