@@ -113,6 +113,60 @@ Attempt 2: Without refreshing, the password was replaced with `secret_sauce` and
 
 ## Equivalence Partitioning
 
+### Test ID: AGE-EP-30-A
+
+| Item | Details |
+|---|---|
+| Test type | Positive |
+| Tester | member-a |
+| Website | Test Pages — Client Server Form Validation |
+| Partition | EP-02 (18–80 inclusive) |
+| Status | Pass |
+
+#### Purpose
+
+Check that an age inside the valid partition (18–80 inclusive) is accepted.
+
+#### Preconditions
+
+Form restored to its starting state. All other fields hold the team's valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| First name | `Alexander` (see baseline note) |
+| Surname | `TestingStudent` |
+| Age | `30` |
+| Country | Singapore |
+| Notes | `Manual testing classroom exercise` |
+
+#### Steps
+
+1. Restore the form.
+2. Enter the valid baseline.
+3. Keep age as `30` (only age is varied in this activity).
+4. Submit the form.
+5. Observe acceptance or rejection.
+6. Where displayed, verify the submitted age.
+
+#### Expected Result
+
+Accept: the form submits successfully and the submitted age shows as 30.
+
+#### Actual Result
+
+The form submitted successfully. The Validation Report showed "Valid Input — Your Input passed validation", and the submitted values listed Age as 30 with all other baseline fields unchanged.
+
+**Baseline note:** the first submission used the README baseline first name `Alex` (4 characters). The server rejected it with "Firstname Error — Firstname too short", even though the published requirement only says the first name "must be filled" and be under 90 characters, and the page's client-side check accepts more than 2 characters. The baseline first name was changed to `Alexander`, which was accepted. Requirement question: what is the server's minimum first-name length? The server rule does not match the published requirement or the client-side check.
+
+#### Evidence
+
+- [Age 30 accepted](../evidence/member-a/age-ep-30-a.png)
+- [Baseline with `Alex` rejected](../evidence/member-a/baseline-alex-rejected.png)
+
+---
+
 ## 2-Point Boundary Tests
 
 ## 3-Point Boundary Tests
