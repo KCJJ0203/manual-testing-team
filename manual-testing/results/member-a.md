@@ -169,4 +169,56 @@ The form submitted successfully. The Validation Report showed "Valid Input — Y
 
 ## 2-Point Boundary Tests
 
+### Test ID: AGE-2P-17-A
+
+| Item | Details |
+|---|---|
+| Test type | Negative |
+| Tester | member-a |
+| Website | Test Pages — Client Server Form Validation |
+| Technique | 2-point boundary testing |
+| Status | Pass |
+
+#### Purpose
+
+Check that an age immediately below the minimum (18) is rejected.
+
+#### Preconditions
+
+The validation form is open and restored. All other fields use the agreed valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| First name | `Alexander` |
+| Surname | `TestingStudent` |
+| Age | `17` |
+| Country | Singapore |
+| Notes | `Manual testing classroom exercise` |
+
+#### Steps
+
+1. Restore the validation form.
+2. Enter the agreed baseline.
+3. Replace age with `17`.
+4. Submit.
+5. Observe the response.
+
+#### Expected Result
+
+Age 17 is rejected because it is below the minimum age of 18.
+
+#### Actual Result
+
+After selecting Submit, the form was not submitted. The browser (Microsoft Edge) showed its built-in validation message on the Age field: "Value must be greater than or equal to 18." The page stayed on the input form and no Validation Report appeared.
+
+This rejection came from client-side (browser) validation, from the Age field's minimum of 18. The request never reached the server, so this result does not show whether the server would also reject age 17.
+
+#### Evidence
+
+[Browser validation message for age 17](../evidence/member-a/age-2p-17-a.png)
+
+---
+
 ## 3-Point Boundary Tests
