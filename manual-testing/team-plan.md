@@ -44,6 +44,11 @@ To be recorded by Member B during Activity 2.
 - Chosen area: Test Pages validation form, First name field
 - Question to investigate: What first-name lengths does the server actually accept, given that the baseline `Alex` was rejected as too short although no minimum is published?
 
+### Member C - Open-Ended Testing
+
+- Chosen area: Surname field on the Test Pages validation form
+- Question to investigate: Does the form accept surnames of exactly 11 and 79 characters, and reject 10 and 80?
+
 ## Repository Integration Arrangements
 
 - Each member works on their own branch `testing/member-x` and edits only their own files.
