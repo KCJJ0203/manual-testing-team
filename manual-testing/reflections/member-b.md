@@ -12,4 +12,4 @@
 
 6. **Did your observations lead to follow-up tests?** The separate age `10` rejection and age `18` acceptance led to the recovery sequence. The successful recovery suggests checking whether correcting a different invalid field, such as a short surname, works the same way.
 
-7. **How does your Git history show your contribution?** My work is on the `testing/member-b` branch and includes my guided results, an executed self-designed test, and this reflection. I still need to commit and push the changes so the repository history shows those steps.
+7. **How does your Git history show your contribution?** My work is committed and pushed on the `testing/member-b` branch. The commit includes my guided results, self-designed test, reflection, and login evidence, and pull request #2 shows these contributions for team review.

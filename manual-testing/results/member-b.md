@@ -9,7 +9,7 @@
 | Browser and version | Google Chrome 157.0.8103.38 (rerun by member-b) |
 | Operating system | macOS |
 
-Member B reran the recorded tests in Google Chrome and confirmed the same results. The form tests were then repeated with country `Singapore` with Codex browser assistance; the baseline and age results matched the records below.
+Member B manually reran the recorded tests in Google Chrome using country `Singapore` for the form tests and confirmed the same results. The age `30` baseline passed, age `10` was rejected, and ages `18` and `19` were accepted.
 
 ## Login Tests
 

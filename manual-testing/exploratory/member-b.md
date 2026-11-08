@@ -71,7 +71,7 @@ No screenshot saved. Both attempts were observed during the test.
 
 The form allowed recovery after an invalid age. Browser validation stopped the age `10` attempt; correcting the age to `18` allowed a successful submission without re-entering the other fields.
 
-Member B reran this sequence in Google Chrome and confirmed the same result. It was repeated with country `Singapore` with Codex browser assistance, with the same outcome.
+Member B manually reran this sequence in Google Chrome with country `Singapore` and confirmed the same result: age `10` was blocked, then correcting only age to `18` allowed submission.
 
 ## Next Question
 
