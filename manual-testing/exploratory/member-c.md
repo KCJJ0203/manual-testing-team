@@ -32,7 +32,7 @@ the surname.
 |---|---|
 | Test type | Negative |
 | Tester | member-c |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -63,11 +63,14 @@ The surname is rejected because it is shorter than 11 characters.
 
 #### Actual Result
 
-Not recorded - test has not been executed.
+After selecting Submit, the form stayed on the same page and red text
+appeared under the surname field saying "Surname provided is too short".
+The form was not submitted. Unlike the age field, no browser validation
+bubble appeared.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-c/own-c-01.png)
 
 ---
 
@@ -77,11 +80,11 @@ Not captured.
 |---|---|
 | Test type | Positive |
 | Tester | member-c |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
-Check that a surname just below the minimum length is rejected.
+Check that a surname of exactly the minimum length is accepted.
 
 #### Preconditions
 
@@ -104,15 +107,17 @@ The validation form is open. All other fields use the agreed baseline.
 
 #### Expected Result
 
-Accepted, if “between” is inclusive
+The surname is accepted, assuming "between 11 and 79" includes 11.
 
 #### Actual Result
 
-Not recorded - test has not been executed.
+After selecting Submit, the form submitted successfully and the results
+page showed the surname as Abcdefghijk. No validation errors appeared.
+This suggests the minimum of 11 is inclusive.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-c/own-c-02.png)
 
 ---
 
@@ -122,11 +127,11 @@ Not captured.
 |---|---|
 | Test type | Positive |
 | Tester | member-c |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
-Check that a surname just below the minimum length is rejected.
+Check that a surname of exactly the maximum length is accepted.
 
 #### Preconditions
 
@@ -149,15 +154,17 @@ The validation form is open. All other fields use the agreed baseline.
 
 #### Expected Result
 
-Accepted, if “between” is inclusive
+The surname is accepted, assuming "between 11 and 79" includes 79.
 
 #### Actual Result
 
-Not recorded - test has not been executed.
+After selecting Submit, the form submitted successfully and the results
+page showed the 79-character surname. No validation errors appeared.
+This suggests the maximum of 79 is inclusive.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-c/own-c-03.png)
 
 ---
 
@@ -167,11 +174,11 @@ Not captured.
 |---|---|
 | Test type | Negative |
 | Tester | member-c |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
-Check that a surname just below the minimum length is rejected.
+Check that a surname just above the maximum length is rejected.
 
 #### Preconditions
 
@@ -194,18 +201,33 @@ The validation form is open. All other fields use the agreed baseline.
 
 #### Expected Result
 
-Rejected, longer than 79
+The surname is rejected because it is longer than 79 characters.
 
 #### Actual Result
 
-Not recorded - test has not been executed.
+After selecting Submit, the form stayed on the same page and red text
+appeared under the surname field saying "Surname provided is too long".
+The form was not submitted. No browser validation bubble appeared.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-c/own-c-04.png)
 
 ---
 
 ## Overall Observations
 
+All four surname boundary tests matched the expected results. Surnames of
+10 and 80 characters were rejected with red text under the field, while
+11 and 79 characters were accepted. This answers the requirement question:
+"between 11 and 79" is inclusive.
+
+The surname field showed feedback differently from the age field. Age used
+a browser validation bubble, while surname used red text on the page. This
+suggests the two fields are checked in different ways.
+
 ## Next Question
+
+Does the server also reject surnames that are too short or too long, or
+only the page? If the page check were skipped, would the server still
+catch it?
