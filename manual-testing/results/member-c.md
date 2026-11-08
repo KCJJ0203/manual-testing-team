@@ -11,46 +11,51 @@
 
 ## Login Tests
 
-### Test ID: YOUR-TEST-ID
+### Test ID: LOGIN-N02
 
 | Item | Details |
 |---|---|
-| Test type | Positive / Negative / Recovery |
-| Tester | Your member identifier |
-| Website | Website name |
-| Status | Not run |
+| Test type | Negative |
+| Tester | member-c |
+| Website | SauceDemo |
+| Status | Pass |
 
 #### Purpose
 
-What does this test check?
+Check that login is rejected when the password is missing.
 
 #### Preconditions
 
-What must be true before the test starts?
+The login page is open, no user is logged in, and both fields are empty.
 
 #### Test Data
 
 | Field | Value |
 |---|---|
-| Input name | Input value |
+| Username | standard_user |
+| Password | (empty) |
 
 #### Steps
 
-1.
-2.
-3.
+1. Follow the shared starting procedure.
+2. Enter the username.
+3. Leave the password empty.
+4. Select Login.
+5. Observe the feedback.
 
 #### Expected Result
 
-Write this before executing the test.
+The attempt is rejected with validation feedback. The inventory is not reached.
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+After selecting Login with the password left empty, the page stayed on the
+login screen and the error message "Epic sadface: Password is required"
+appeared. The inventory page was not reached.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-c/login-n02.png)
 
 ---
 
