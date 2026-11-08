@@ -160,8 +160,58 @@ validation errors appeared.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-c/age-2p-80.png)
 
 ---
 
 ## 3-Point Boundary Tests
+
+### Test ID: AGE-3P-79-C
+
+| Item | Details |
+|---|---|
+| Test type | Positive |
+| Tester | member-c |
+| Website | Test Pages validation form |
+| Technique | 3-point boundary testing |
+| Status | Pass |
+
+#### Purpose
+
+Check that the value just inside the maximum boundary is accepted.
+
+#### Preconditions
+
+The validation form is open.
+All other fields will use the agreed valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| Age | `79` |
+| Other fields | Agreed valid baseline |
+
+#### Steps
+
+1. Restore the validation form.
+2. Enter the agreed baseline.
+3. Replace age with `79`.
+4. Submit.
+5. Observe the response.
+
+#### Expected Result
+
+Age 79 is accepted because it is within the valid range of 18 to 80.
+
+#### Actual Result
+
+After entering the baseline with age 79 and selecting Submit, the form
+submitted successfully and the results page showed the age as 79. No
+validation errors appeared.
+
+#### Evidence
+
+[View screenshot](../evidence/member-c/age-3p-79.png)
+
+---
