@@ -114,4 +114,54 @@ sent to the server.
 
 ## 2-Point Boundary Tests
 
+### Test ID: AGE-2P-80-C
+
+| Item | Details |
+|---|---|
+| Test type | Positive |
+| Tester | member-c |
+| Website | Test Pages validation form |
+| Technique | 2-point boundary testing |
+| Status | Pass |
+
+#### Purpose
+
+Check that the maximum valid age is accepted.
+
+#### Preconditions
+
+The validation form is open.
+All other fields will use the agreed valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| Age | `80` |
+| Other fields | Agreed valid baseline |
+
+#### Steps
+
+1. Restore the validation form.
+2. Enter the agreed baseline.
+3. Replace age with `80`.
+4. Submit.
+5. Observe the response.
+
+#### Expected Result
+
+Age 80 is accepted because it is the maximum valid age.
+
+#### Actual Result
+
+After entering the baseline with age 80 and selecting Submit, the form
+submitted successfully and the results page showed the age as 80. No
+validation errors appeared.
+
+#### Evidence
+
+Not captured.
+
+---
+
 ## 3-Point Boundary Tests
