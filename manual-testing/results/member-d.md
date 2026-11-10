@@ -206,10 +206,10 @@ Validation form is open with valid baseline data.
 
 Age 82 is rejected because it exceeds the valid boundary limit (18 to 80).
 
-#### Actual Result
+#### Actual Results
 
 Form submission was rejected with an error banner indicating age must be less than or equal to 80.
 
-#### Evidence
+##### Evidence
 
 [View Evidence](../evidence/member-d/AGE-3P-79-C_Boundary3P_Pass.png)
