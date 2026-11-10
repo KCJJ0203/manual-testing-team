@@ -62,7 +62,7 @@ The first submission was blocked with the red error banner "Epic sadface: Userna
 
 #### Evidence
 
-[View Evidence](../evidence/EXP-D-01_LoginRecovery_Pass_2026-11-10.png)
+[View Evidence](../evidence/member-d/EXP-D-01_LoginRecovery_Pass.png)
 
 ---
 
@@ -71,7 +71,3 @@ The first submission was blocked with the red error banner "Epic sadface: Userna
 The SauceDemo login form recovers cleanly after validation failure. The form maintained the entered password state after throwing the missing username error, allowing immediate recovery and authentication once the missing username was provided.
 
 Member D verified this flow on Google Chrome on Windows 11 and confirmed that no manual page refresh or password re-entry was required.
-
-## Next Question
-
-Would the login recovery behavior hold true if an invalid password was tried first before entering the correct password?
