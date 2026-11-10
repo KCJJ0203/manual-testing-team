@@ -102,6 +102,46 @@ Form validation blocked submission with a validation error indicating age must b
 
 ---
 
+### Test ID: AGE-EP-ABC
+
+| Item | Details |
+|---|---|
+| Test type | Negative / Invalid Format |
+| Tester | member-d |
+| Website | Test Pages Validation Form |
+| Status | Pass |
+
+#### Purpose
+Verify that entering non-numeric string data (`abc`) into the age input field is properly rejected.
+
+#### Preconditions
+Validation form is open with valid baseline data entered.
+
+#### Test Data
+| Field | Value |
+|---|---|
+| First name | `Alexander` |
+| Surname | `TestingStudent` |
+| Age | `abc` |
+| Country | `Singapore` |
+
+#### Steps
+1. Restore the validation form.
+2. Enter valid baseline first name (`Alexander`) and surname (`TestingStudent`).
+3. Enter `abc` into the Age field.
+4. Submit the form.
+
+#### Expected Result
+Form submission is blocked because age requires a numeric value.
+
+#### Actual Result
+Form validation blocked submission with an error indicating age cannot contain letters or non-numeric input.
+
+#### Evidence
+[View Evidence](../evidence/member-d/AGE-EP-ABC_Equivalence_Pass.png)
+
+---
+
 ## 2-Point Boundary Tests
 
 ### Test ID: AGE-2P-81-D
